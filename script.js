@@ -1,12 +1,15 @@
 $(document).ready(function () {
+  let modified = document.lastModified;
+  console.log(modified);
+  $("#modification").html(`Last Modified: ${modified}`);
+
   $(window).scroll(function () {
     var scroll = $(window).scrollTop();
 
-    if (scroll > 300) {
-      $("#nav-wrap").css("background", "rgba(68, 68, 68, 0.9)");
-    }
-
     if ($(window).width() <= 768) {
+      if (scroll > 300) {
+        $("#nav-wrap").css("background", "rgba(68, 68, 68, 1)");
+      }
       if (scroll <= 318) {
         $("#nav-wrap").css("background", "transparent");
         $("#about-link").removeClass("current");
@@ -53,6 +56,9 @@ $(document).ready(function () {
         $("#contact-link").addClass("current");
       }
     } else {
+      if (scroll > 300) {
+        $("#nav-wrap").css("background", "rgba(68, 68, 68, 0.9)");
+      }
       if (scroll <= 300) {
         $("#nav-wrap").css("background", "transparent");
         $("#about-link").removeClass("current");

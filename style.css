@@ -1001,7 +1001,7 @@ footer {
   padding-top: 48px;
   margin-bottom: 48px;
   background-color: #0f0f0f;
-  color: #303030;
+  color: #525252;
   font-size: 14px;
   line-height: 24px;
   text-align: center;
@@ -1065,4 +1065,10 @@ footer {
   .container {
     width: 80%;
   }
+}
+
+#modification {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #444444;
 }
